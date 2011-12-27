@@ -25,10 +25,15 @@ FOO='foo'
     usage
 }
 
+if [ -d ${1} ]
+then echo "Already exists: [ $1 ]"
+	 exit 1
+fi
+
 if /bin/cp -a "${FOO}" ${1}
 then echo "Created: ${1}"
 else echo "Error copying 'foo'"
- 	 exit 1
+ 	 exit 3
 fi
 
 echo

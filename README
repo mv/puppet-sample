@@ -21,6 +21,20 @@ NOTE: The whole project is a work in progress, the modules have been made in dif
       times and have different levels of coherency and integration.
 
 
+HOW TO USE
+----------
+
+1. Create a new module 'mvf' based on 'foo':
+
+   ./module-clone.sh mvf
+
+2. If needed, add custom 'projects' inside your module:
+
+   cd mvf
+   ../project-rename 'example42' 'my-project'
+
+
+
 MODULES STANDARD STRUCTURE
 --------------------------
 

@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module foo
+
+User variables (unfiltered):
+# $foo_server = <%= scope.lookupvar('foo_server') %>
+
+User variables (after params.pp filter):
+# $foo::params::server = <%= scope.lookupvar('foo::params::server') %>
+
+General internal variables:
+$foo::params::pkg_name          = <%= scope.lookupvar('foo::params::pkg_name')          %>
+$foo::params::service_name      = <%= scope.lookupvar('foo::params::service_name')      %>
+$foo::params::process_name      = <%= scope.lookupvar('foo::params::process_name')      %>
+$foo::params::has_status        = <%= scope.lookupvar('foo::params::has_status')        %>
+$foo::params::config_file       = <%= scope.lookupvar('foo::params::config_file')       %>
+$foo::params::config_file_mode  = <%= scope.lookupvar('foo::params::config_file_mode')  %>
+$foo::params::config_file_owner = <%= scope.lookupvar('foo::params::config_file_owner') %>
+$foo::params::config_file_group = <%= scope.lookupvar('foo::params::config_file_group') %>
+$foo::params::config_dir        = <%= scope.lookupvar('foo::params::config_dir')        %>
+$foo::params::initconfig_file   = <%= scope.lookupvar('foo::params::initconfig_file')   %>
+$foo::params::pid_file          = <%= scope.lookupvar('foo::params::pid_file')          %>
+$foo::params::data_dir          = <%= scope.lookupvar('foo::params::data_dir')          %>
+$foo::params::log_dir           = <%= scope.lookupvar('foo::params::log_dir')           %>
+$foo::params::protocol          = <%= scope.lookupvar('foo::params::protocol')          %>
+$foo::params::port              = <%= scope.lookupvar('foo::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/foo') %>
+
+Variables used by monitor class:
+$foo::params::monitor_target_real    = <%= scope.lookupvar('foo::params::monitor_target_real')    %> ( Set with $foo_monitor_target      )
+$foo::params::monitor_baseurl_real   = <%= scope.lookupvar('foo::params::monitor_baseurl_real')   %> ( Set with $foo_monitor_baseurl     )
+$foo::params::monitor_url_pattern    = <%= scope.lookupvar('foo::params::monitor_url_pattern')    %> ( Set with $foo_monitor_url_pattern )
+$foo::params::monitor_port_enable    = <%= scope.lookupvar('foo::params::monitor_port_enable')    %> ( Set with $foo_monitor_port        )
+$foo::params::monitor_url_enable     = <%= scope.lookupvar('foo::params::monitor_url_enable')     %> ( Set with $foo_monitor_url         )
+$foo::params::monitor_process_enable = <%= scope.lookupvar('foo::params::monitor_process_enable') %> ( Set with $foo_monitor_process     )
+$foo::params::monitor_plugin_enable  = <%= scope.lookupvar('foo::params::monitor_plugin_enable')  %> ( Set with $foo_monitor_plugin      )
+
+Variables used by backup class:
+$foo::params::backup_target_real = <%= scope.lookupvar('foo::params::backup_target_real') %> ( Set with $foo_backup_target    )
+$foo::params::backup_frequency   = <%= scope.lookupvar('foo::params::backup_frequency')   %> ( Set with $foo_backup_frequency )
+$foo::params::backup_data_enable = <%= scope.lookupvar('foo::params::backup_data_enable') %> ( Set with $foo_backup_data      )
+$foo::params::backup_log_enable  = <%= scope.lookupvar('foo::params::backup_log_enable')  %> ( Set with $foo_backup_log       )
+
+Variables used by firewall class:
+$foo::params::firewall_source_real      = <%= scope.lookupvar('foo::params::firewall_source_real')      %> ( Set with $foo_firewall_source      )
+$foo::params::firewall_destination_real = <%= scope.lookupvar('foo::params::firewall_destination_real') %> ( Set with $foo_firewall_destination )
+$foo::params::firewall_enable           = <%= scope.lookupvar('foo::params::firewall_destination_real') %> ( Set with $foo_firewall_enable      )
+

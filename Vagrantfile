@@ -16,15 +16,15 @@ Vagrant::Config.run do |config|
   config.vm.define :master do |master|
     master.vm.box = "centos57"
     master.vm.network("192.168.10.50", :netmask => "255.255.255.0" )
-#   master.vm.forward_port("ssh", 22, 5022)
-#   master.vm.share_folder "vagrant", "/vagrant", "."
+    master.vm.share_folder "v-modules"  , "/etc/puppet/modules"  , "modules"
+    master.vm.share_folder "v-manifests", "/etc/puppet/manifests", "manifests"
   end
 
   config.vm.define :node1 do |node1|
     node1.vm.box = "centos57"
     node1.vm.network("192.168.10.51", :netmask => "255.255.255.0" )
-#   node1.vm.forward_port("ssh", 22, 5122)
-#   node1.vm.share_folder "vagrant", "/vagrant", "."
+    node1.vm.share_folder "v-modules"  , "/etc/puppet/modules"  , "modules"
+    node1.vm.share_folder "v-manifests", "/etc/puppet/manifests", "manifests"
   end
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests

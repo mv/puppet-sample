@@ -1,7 +1,6 @@
 
 This file [/etc/motd] is managed by
 
-
 Font: graffiti
 __________                            __
 \______   \__ ________ ______   _____/  |_
@@ -48,5 +47,6 @@ _  ____// /_/ /__  /_/ /_  /_/ /  __/ /_
                /_/     /_/
 
 
-This file [/etc/motd] is managed by
+Ref:
+    http://www.network-science.de/ascii/
 

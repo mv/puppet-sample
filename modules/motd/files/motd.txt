@@ -1,5 +1,5 @@
 
-This file [/etc/motd] is managed by
+This file is managed by
 
     ________                            _____
     ___  __ \___  ________________________  /_
@@ -7,5 +7,7 @@ This file [/etc/motd] is managed by
     _  ____// /_/ /__  /_/ /_  /_/ /  __/ /_
     /_/     \__,_/ _  .___/_  .___/\___/\__/
                    /_/     /_/
+
+Any local modifications will be lost after the next puppet run.
 
 

@@ -19,5 +19,5 @@ class foo::firewall::absent {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

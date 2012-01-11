@@ -13,5 +13,5 @@ class foo::disableboot inherits foo {
     }
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

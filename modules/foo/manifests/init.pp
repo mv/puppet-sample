@@ -61,5 +61,5 @@ class foo {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

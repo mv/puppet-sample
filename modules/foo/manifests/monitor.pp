@@ -84,5 +84,5 @@ class foo::monitor {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

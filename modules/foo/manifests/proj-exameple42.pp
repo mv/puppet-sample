@@ -25,5 +25,5 @@ class foo::example42 {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

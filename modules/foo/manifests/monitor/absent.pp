@@ -42,5 +42,5 @@ class foo::monitor::absent {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

@@ -58,5 +58,5 @@ class foo::backup {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

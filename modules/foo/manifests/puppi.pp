@@ -27,5 +27,5 @@ class foo::puppi {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

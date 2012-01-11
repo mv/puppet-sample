@@ -35,5 +35,5 @@ class foo::disable {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

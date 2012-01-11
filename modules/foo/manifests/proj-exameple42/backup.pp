@@ -8,5 +8,5 @@ class foo::example42::backup inherits foo::backup {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

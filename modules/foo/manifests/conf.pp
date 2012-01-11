@@ -22,5 +22,5 @@ define foo::conf ($value) {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

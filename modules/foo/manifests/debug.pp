@@ -25,5 +25,5 @@ class foo::debug {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

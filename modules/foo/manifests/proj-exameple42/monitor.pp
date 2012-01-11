@@ -7,5 +7,5 @@ class foo::example42::monitor inherits foo::monitor {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

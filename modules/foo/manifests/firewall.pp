@@ -23,5 +23,5 @@ class foo::firewall {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

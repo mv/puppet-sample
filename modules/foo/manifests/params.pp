@@ -269,5 +269,5 @@ class foo::params  {
 }
 
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

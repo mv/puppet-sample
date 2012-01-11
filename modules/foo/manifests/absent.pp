@@ -25,5 +25,5 @@ class foo::absent {
 
 }
 
-# vim:ft=pp:
+# vim:ft=puppet:
 

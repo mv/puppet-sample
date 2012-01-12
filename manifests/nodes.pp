@@ -1,6 +1,0 @@
-
-node /node/ {
-    include motd
-}
-
-

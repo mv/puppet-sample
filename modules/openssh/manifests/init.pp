@@ -14,8 +14,8 @@ class openssh {
     # Load variables defined in params.pp file.
     require openssh::params
 
-    # Default action: install
-    require openssh::install
+    # Default action: execute install
+    include openssh::install
 
 }
 

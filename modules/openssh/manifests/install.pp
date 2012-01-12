@@ -11,9 +11,6 @@ class openssh::install {
     # Load variables defined in params.pp file.
     require openssh::params
 
-    # use $port set in openssh::params
-#   openssh::config { "Port": value => "$port" }
-
     # Package/Service/File tripplet
     package { "openssh":
         name   => "${openssh::params::pkg_name}",
@@ -39,8 +36,7 @@ class openssh::install {
         audit   => "all",
         require => Package["openssh"],
         notify  => Service["openssh"],
-        source  => ["puppet:///openssh/sshd_config.prod",
-                    "puppet:///openssh/sshd_config"],
+        content => template("openssh/sshd_config.erb"),
     }
 
     file { "ssh_config":

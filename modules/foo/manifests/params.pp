@@ -50,6 +50,12 @@ class foo::params  {
         default => true,
     }
 
+    $config_dir = $operatingsystem ? {
+        redhat  => "/etc/foo.conf",
+        centos  => "/etc/foo.conf",
+        default => "/etc/foo",
+    }
+
     $config_file = $operatingsystem ? {
         freebsd => "/usr/local/etc/foo/foo.conf",
         redhat  => "/etc/foo.conf",
@@ -69,12 +75,6 @@ class foo::params  {
         default => "root",
     }
 
-    $config_dir = $operatingsystem ? {
-        redhat  => "/etc/foo.conf",
-        centos  => "/etc/foo.conf",
-        default => "/etc/foo",
-    }
-
     $init_config_file = $operatingsystem ? {
         debian  => "/etc/default/foo",
         ubuntu  => "/etc/default/foo",
@@ -85,25 +85,25 @@ class foo::params  {
 
     # TODO: Used by monitor class
     $pid_file = $operatingsystem ? {
-        default => "/var/run/ntpd.pid",
+        default => "/var/run/foo.pid",
     }
 
     # TODO: Used by backup class
     $data_dir = $operatingsystem ? {
-        default => "/var/lib/ntp",
+        default => "/var/lib/foo",
     }
 
     # TODO: Used by backup and logrotate class
     $log_dir = $operatingsystem ? {
-        default => "/var/log/ntp",
+        default => "/var/log/foo",
     }
 
     # Used by monitor and firewall class
     # If you need to define additional ports, call them
     # $protocol1/$port1 and add the relevant
     # parts in firewall.pp and monitor.pp
-    $protocol = "udp"
-    $port     = "3350"
+    $protocol = "tcp"
+    $port     = "8080"
 
 }
 

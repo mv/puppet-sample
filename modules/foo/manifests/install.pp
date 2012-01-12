@@ -34,6 +34,7 @@ class foo::install {
         owner   => "${foo::params::config_file_owner}",
         group   => "${foo::params::config_file_group}",
         ensure  => present,
+        audit   => "all",
         require => Package["foo"],
         notify  => Service["foo"],
         source  => ["puppet:///foo/foo.conf.${environment}",

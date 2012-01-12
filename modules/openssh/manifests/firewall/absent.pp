@@ -1,13 +1,9 @@
-# Class openssh::firewall
+# Class openssh::firewall::absent
 #
-# Manages openssh firewalling using custom Firewall wrapper
-# By default it opens openssh's default port(s) to anybody
-# It's automatically included if $firewall=yes
+# Remove openssh firewall elements
 #
-# Usage:
-# Automatically included if $firewall=yes
-#
-class openssh::firewall {
+
+class openssh::firewall::absent {
 
     include openssh::params
 
@@ -18,7 +14,7 @@ class openssh::firewall {
         port        => "${openssh::params::port}",
         action      => "allow",
         direction   => "input",
-        enable      => "${openssh::params::firewall_enable}",
+        enable      => "false",
     }
 
 }

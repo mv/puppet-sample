@@ -2,41 +2,49 @@
 
 These are the variables used by the module openssh
 
-User variables:
+User variables (unfiltered):
+# $openssh_server = <%= scope.lookupvar('openssh_server') %>
+
+User variables (after params.pp filter):
+# $openssh::params::server = <%= scope.lookupvar('openssh::params::server') %>
 
 General internal variables:
-$packagename = <%= scope.lookupvar('openssh::params::packagename') %>
-$servicename = <%= scope.lookupvar('openssh::params::servicename') %>
-$processname = <%= scope.lookupvar('openssh::params::servicename') %>
-$hasstatus = <%= scope.lookupvar('openssh::params::hasstatus') %>
-$configfile = <%= scope.lookupvar('openssh::params::configfile') %>
-$configfile_mode = <%= scope.lookupvar('openssh::params::configfile_mode') %>
-$configfile_owner = <%= scope.lookupvar('openssh::params::configfile_owner') %>
-$configfile_group = <%= scope.lookupvar('openssh::params::configfile_group') %>
-$configdir = <%= scope.lookupvar('openssh::params::configdir') %>
-$initconfigfile = <%= scope.lookupvar('openssh::params::initconfigfile') %>
-$pidfile = <%= scope.lookupvar('openssh::params::pidfile') %>
-$datadir = <%= scope.lookupvar('openssh::params::datadir') %>
-$logdir = <%= scope.lookupvar('openssh::params::logdir') %>
-$protocol = <%= scope.lookupvar('openssh::params::protocol') %>
-$port = <%= scope.lookupvar('openssh::params::port') %>
+$openssh::params::pkg_name          = <%= scope.lookupvar('openssh::params::pkg_name')          %>
+$openssh::params::service_name      = <%= scope.lookupvar('openssh::params::service_name')      %>
+$openssh::params::process_name      = <%= scope.lookupvar('openssh::params::process_name')      %>
+$openssh::params::has_status        = <%= scope.lookupvar('openssh::params::has_status')        %>
+$openssh::params::config_file       = <%= scope.lookupvar('openssh::params::config_file')       %>
+$openssh::params::config_file_mode  = <%= scope.lookupvar('openssh::params::config_file_mode')  %>
+$openssh::params::config_file_owner = <%= scope.lookupvar('openssh::params::config_file_owner') %>
+$openssh::params::config_file_group = <%= scope.lookupvar('openssh::params::config_file_group') %>
+$openssh::params::config_dir        = <%= scope.lookupvar('openssh::params::config_dir')        %>
+$openssh::params::initconfig_file   = <%= scope.lookupvar('openssh::params::initconfig_file')   %>
+$openssh::params::pid_file          = <%= scope.lookupvar('openssh::params::pid_file')          %>
+$openssh::params::data_dir          = <%= scope.lookupvar('openssh::params::data_dir')          %>
+$openssh::params::log_dir           = <%= scope.lookupvar('openssh::params::log_dir')           %>
+$openssh::params::protocol          = <%= scope.lookupvar('openssh::params::protocol')          %>
+$openssh::params::port              = <%= scope.lookupvar('openssh::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/openssh') %>
 
 Variables used by monitor class:
-$monitor_target_real = <%= scope.lookupvar('openssh::params::monitor_target_real') %>
-$monitor_baseurl_real = <%= scope.lookupvar('openssh::params::monitor_baseurl_real') %>
-$monitor_url_pattern = <%= scope.lookupvar('openssh::params::monitor_url_pattern') %>
-$monitor_port_enable = <%= scope.lookupvar('openssh::params::monitor_port_enable') %>
-$monitor_url_enable = <%= scope.lookupvar('openssh::params::monitor_url_enable') %>
-$monitor_process_enable = <%= scope.lookupvar('openssh::params::monitor_process_enable') %>
-$monitor_plugin_enable = <%= scope.lookupvar('openssh::params::monitor_plugin_enable') %>
+$openssh::params::monitor_target_real    = <%= scope.lookupvar('openssh::params::monitor_target_real')    %> ( Set with $openssh_monitor_target      )
+$openssh::params::monitor_baseurl_real   = <%= scope.lookupvar('openssh::params::monitor_baseurl_real')   %> ( Set with $openssh_monitor_baseurl     )
+$openssh::params::monitor_url_pattern    = <%= scope.lookupvar('openssh::params::monitor_url_pattern')    %> ( Set with $openssh_monitor_url_pattern )
+$openssh::params::monitor_port_enable    = <%= scope.lookupvar('openssh::params::monitor_port_enable')    %> ( Set with $openssh_monitor_port        )
+$openssh::params::monitor_url_enable     = <%= scope.lookupvar('openssh::params::monitor_url_enable')     %> ( Set with $openssh_monitor_url         )
+$openssh::params::monitor_process_enable = <%= scope.lookupvar('openssh::params::monitor_process_enable') %> ( Set with $openssh_monitor_process     )
+$openssh::params::monitor_plugin_enable  = <%= scope.lookupvar('openssh::params::monitor_plugin_enable')  %> ( Set with $openssh_monitor_plugin      )
 
 Variables used by backup class:
-$backup_target_real = <%= scope.lookupvar('openssh::params::backup_target_real') %>
-$backup_frequency = <%= scope.lookupvar('openssh::params::backup_frequency') %>
-$backup_data_enable = <%= scope.lookupvar('openssh::params::backup_data_enable') %>
-$backup_log_enable = <%= scope.lookupvar('openssh::params::backup_log_enable') %>
-$general_base_source = <%= scope.lookupvar('openssh::params::general_base_source') %>
+$openssh::params::backup_target_real = <%= scope.lookupvar('openssh::params::backup_target_real') %> ( Set with $openssh_backup_target    )
+$openssh::params::backup_frequency   = <%= scope.lookupvar('openssh::params::backup_frequency')   %> ( Set with $openssh_backup_frequency )
+$openssh::params::backup_data_enable = <%= scope.lookupvar('openssh::params::backup_data_enable') %> ( Set with $openssh_backup_data      )
+$openssh::params::backup_log_enable  = <%= scope.lookupvar('openssh::params::backup_log_enable')  %> ( Set with $openssh_backup_log       )
 
 Variables used by firewall class:
-$firewall_source_real = <%= scope.lookupvar('openssh::params::firewall_source_real') %>
-$firewall_destination_real = <%= scope.lookupvar('openssh::params::firewall_destination_real') %>
+$openssh::params::firewall_source_real      = <%= scope.lookupvar('openssh::params::firewall_source_real')      %> ( Set with $openssh_firewall_source      )
+$openssh::params::firewall_destination_real = <%= scope.lookupvar('openssh::params::firewall_destination_real') %> ( Set with $openssh_firewall_destination )
+$openssh::params::firewall_enable           = <%= scope.lookupvar('openssh::params::firewall_destination_real') %> ( Set with $openssh_firewall_enable      )
+

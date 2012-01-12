@@ -1,27 +1,31 @@
-# Class: openssh::puppi
+# Class openssh::puppi
 #
 # This class manages the puppi extensions for the openssh module
 # It's automatically included and used if $puppi=yes
 #
 class openssh::puppi {
-    
+
     puppi::info::module { "openssh":
-        packagename => "${openssh::params::packagename}",
-        servicename => "${openssh::params::servicename}",
-        processname => "${openssh::params::processname}",
-        configfile  => "${openssh::params::configfile}",
-        configdir   => "${openssh::params::configdir}",
-        pidfile     => "${openssh::params::pidfile}",
-        datadir     => "${openssh::params::datadir}",
-        logdir      => "${openssh::params::logdir}",
-        protocol    => "${openssh::params::protocol}",
-        port        => "${openssh::params::port}",
-        description => "What Puppet knows about openssh" ,
-        run         => "ls -la ~/.ssh/",
+        pkg_name     => "${openssh::params::pkg_name}",
+        service_name => "${openssh::params::service_name}",
+        process_name => "${openssh::params::process_name}",
+        config_file  => "${openssh::params::config_file}",
+        config_dir   => "${openssh::params::config_dir}",
+        pid_file     => "${openssh::params::pid_file}",
+        data_dir     => "${openssh::params::data_dir}",
+        log_dir      => "${openssh::params::log_dir}",
+        protocol     => "${openssh::params::protocol}",
+        port         => "${openssh::params::port}",
+        description  => "What Puppet knows about openssh" ,
+        # run         => "openssh -V###",
     }
 
-##    puppi::log { "openssh":
-##        log      => "${openssh::params::logdir}",
-##    }
+    puppi::log { "openssh":
+        description => "Logs of openssh" ,
+        log         => "${openssh::params::log_dir}",
+    }
 
 }
+
+# vim:ft=puppet:
+

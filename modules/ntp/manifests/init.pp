@@ -15,7 +15,7 @@ class ntp {
     require ntp::params
 
     # Default action: install
-    require ntp::install
+    include ntp::install
 
 }
 

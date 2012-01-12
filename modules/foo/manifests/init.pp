@@ -15,7 +15,7 @@ class foo {
     require foo::params
 
     # Default action: install
-    require foo::install
+    include foo::install
 
 }
 

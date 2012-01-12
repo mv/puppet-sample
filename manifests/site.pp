@@ -13,6 +13,7 @@ node /node/ {
     include motd
     include sudo
     include ntp
+	include openssh
 #   include ntp::remove
 }
 
@@ -20,6 +21,7 @@ node /.*/ {
     include motd
 	include hbase::remove
 }
+
 
 # $extlookup_datadir = "/etc/puppet/config"
 # $extlookup_precedence = [ "location_%{loc}.yml",

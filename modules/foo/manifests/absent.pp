@@ -1,4 +1,4 @@
-# Class: foo::absent
+# Class foo::absent
 #
 # Removes foo package and its relevant monitor, backup, firewall entries
 #

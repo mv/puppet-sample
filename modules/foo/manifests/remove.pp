@@ -1,4 +1,4 @@
-# Class: foo::remove
+# Class foo::remove
 #
 # Removes foo package and its relevant monitor, backup, firewall entries
 #
@@ -8,7 +8,7 @@
 
 class foo::remove {
 
-	# wrapper: calls foo::absent
+    # wrapper: calls foo::absent
     require foo::absent
 
 }

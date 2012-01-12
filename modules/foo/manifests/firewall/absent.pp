@@ -1,4 +1,4 @@
-# Class: foo::firewall::absent
+# Class foo::firewall::absent
 #
 # Remove foo firewall elements
 #

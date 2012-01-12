@@ -1,4 +1,4 @@
-# Class: foo::install
+# Class foo::install
 #
 # It defines package, service, main configuration file.
 #
@@ -36,6 +36,8 @@ class foo::install {
         ensure  => present,
         require => Package["foo"],
         notify  => Service["foo"],
+        source  => ["puppet:///foo/foo.conf.${environment}",
+                    "puppet:///foo/foo.conf"],
         # content => template("foo/foo.conf.erb"),
     }
 

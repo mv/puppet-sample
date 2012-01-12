@@ -83,17 +83,24 @@ class foo::params  {
         default => "/etc/sysconfig/foo",
     }
 
+    # TODO: Used by monitor class
     $pid_file = $operatingsystem ? {
-        default => "/var/run/foo.pid",
+        default => "/var/run/ntpd.pid",
+    }
+
+    # TODO: Used by backup class
+    $data_dir = $operatingsystem ? {
+        default => "/var/lib/ntp",
     }
 
     # TODO: Used by backup and logrotate class
-#   $log_dir = $operatingsystem ? {
-#       default => "/var/log/foo",
-#   }
+    $log_dir = $operatingsystem ? {
+        default => "/var/log/ntp",
+    }
 
     # Used by monitor and firewall class
-    # If you need to define additional ports, call them $protocol1/$port1 and add the relevant
+    # If you need to define additional ports, call them
+    # $protocol1/$port1 and add the relevant
     # parts in firewall.pp and monitor.pp
     $protocol = "udp"
     $port     = "3350"

@@ -6,10 +6,6 @@
 class foo::backup::params  {
 
 
-    $data_dir = $operatingsystem ? {
-        default => "/var/lib/foo",
-    }
-
 
 ### DEFAULTS FOR BACKUP CLASS
 

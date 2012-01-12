@@ -1,4 +1,4 @@
-# Class: foo::monitor
+# Class foo::monitor
 #
 # Monitors foo process/ports/service using Example42 monitor meta module (to be adapted to custom monitor solutions)
 #

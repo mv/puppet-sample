@@ -1,5 +1,5 @@
 #
-# Class: foo
+# Class foo
 #
 # Manages foo.
 # Include it to install and run foo

@@ -1,4 +1,4 @@
-# Class: foo::puppi
+# Class foo::puppi
 #
 # This class manages the puppi extensions for the foo module
 # It's automatically included and used if $puppi=yes

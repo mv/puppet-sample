@@ -1,4 +1,4 @@
-# Class: foo::monitor::absent
+# Class foo::monitor::absent
 #
 # Remove foo monitor elements
 #

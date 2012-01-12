@@ -1,4 +1,4 @@
-# Class: foo::backup
+# Class foo::backup
 #
 # Backups foo data and logs using Example42 backup meta module (to be adapted to custom backup solutions)
 #

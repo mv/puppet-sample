@@ -1,4 +1,4 @@
-# Class: foo::firewall
+# Class foo::firewall
 #
 # Manages foo firewalling using custom Firewall wrapper
 # By default it opens foo's default port(s) to anybody

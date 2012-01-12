@@ -1,5 +1,5 @@
 #
-# Class: foo::debug
+# Class foo::debug
 #
 # This class is used only for debugging purposes
 #

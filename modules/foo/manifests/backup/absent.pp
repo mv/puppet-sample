@@ -1,4 +1,4 @@
-# Class: foo::backup::absent
+# Class foo::backup::absent
 #
 # Remove foo backup elements
 #

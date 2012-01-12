@@ -8,6 +8,7 @@
 
 class foo::absent {
 
+    # Load variables defined in params.pp file.
     require foo::params
 
     package { "foo":

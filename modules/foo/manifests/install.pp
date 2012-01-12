@@ -1,15 +1,12 @@
+# Class: foo::install
 #
-# Class: foo
-#
-# Manages foo.
-# Include it to install and run foo
 # It defines package, service, main configuration file.
 #
 # Usage:
 # include foo
 #
 
-class foo {
+class foo::install {
 
     # Load variables defined in params.pp file.
     require foo::params

@@ -7,7 +7,7 @@
 # Usage:
 # foo::conf    { "mynetworks":  value => "127.0.0.0/8 10.42.42.0/24" }
 #
-define foo::conf ($value) {
+define foo::config ($value) {
 
     require foo::params
 

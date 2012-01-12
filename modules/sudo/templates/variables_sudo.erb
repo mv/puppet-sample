@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module sudo
+
+User variables (unfiltered):
+# $sudo_server = <%= scope.lookupvar('sudo_server') %>
+
+User variables (after params.pp filter):
+# $sudo::params::server = <%= scope.lookupvar('sudo::params::server') %>
+
+General internal variables:
+$sudo::params::pkg_name          = <%= scope.lookupvar('sudo::params::pkg_name')          %>
+$sudo::params::service_name      = <%= scope.lookupvar('sudo::params::service_name')      %>
+$sudo::params::process_name      = <%= scope.lookupvar('sudo::params::process_name')      %>
+$sudo::params::has_status        = <%= scope.lookupvar('sudo::params::has_status')        %>
+$sudo::params::config_file       = <%= scope.lookupvar('sudo::params::config_file')       %>
+$sudo::params::config_file_mode  = <%= scope.lookupvar('sudo::params::config_file_mode')  %>
+$sudo::params::config_file_owner = <%= scope.lookupvar('sudo::params::config_file_owner') %>
+$sudo::params::config_file_group = <%= scope.lookupvar('sudo::params::config_file_group') %>
+$sudo::params::config_dir        = <%= scope.lookupvar('sudo::params::config_dir')        %>
+$sudo::params::initconfig_file   = <%= scope.lookupvar('sudo::params::initconfig_file')   %>
+$sudo::params::pid_file          = <%= scope.lookupvar('sudo::params::pid_file')          %>
+$sudo::params::data_dir          = <%= scope.lookupvar('sudo::params::data_dir')          %>
+$sudo::params::log_dir           = <%= scope.lookupvar('sudo::params::log_dir')           %>
+$sudo::params::protocol          = <%= scope.lookupvar('sudo::params::protocol')          %>
+$sudo::params::port              = <%= scope.lookupvar('sudo::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/sudo') %>
+
+Variables used by monitor class:
+$sudo::params::monitor_target_real    = <%= scope.lookupvar('sudo::params::monitor_target_real')    %> ( Set with $sudo_monitor_target      )
+$sudo::params::monitor_baseurl_real   = <%= scope.lookupvar('sudo::params::monitor_baseurl_real')   %> ( Set with $sudo_monitor_baseurl     )
+$sudo::params::monitor_url_pattern    = <%= scope.lookupvar('sudo::params::monitor_url_pattern')    %> ( Set with $sudo_monitor_url_pattern )
+$sudo::params::monitor_port_enable    = <%= scope.lookupvar('sudo::params::monitor_port_enable')    %> ( Set with $sudo_monitor_port        )
+$sudo::params::monitor_url_enable     = <%= scope.lookupvar('sudo::params::monitor_url_enable')     %> ( Set with $sudo_monitor_url         )
+$sudo::params::monitor_process_enable = <%= scope.lookupvar('sudo::params::monitor_process_enable') %> ( Set with $sudo_monitor_process     )
+$sudo::params::monitor_plugin_enable  = <%= scope.lookupvar('sudo::params::monitor_plugin_enable')  %> ( Set with $sudo_monitor_plugin      )
+
+Variables used by backup class:
+$sudo::params::backup_target_real = <%= scope.lookupvar('sudo::params::backup_target_real') %> ( Set with $sudo_backup_target    )
+$sudo::params::backup_frequency   = <%= scope.lookupvar('sudo::params::backup_frequency')   %> ( Set with $sudo_backup_frequency )
+$sudo::params::backup_data_enable = <%= scope.lookupvar('sudo::params::backup_data_enable') %> ( Set with $sudo_backup_data      )
+$sudo::params::backup_log_enable  = <%= scope.lookupvar('sudo::params::backup_log_enable')  %> ( Set with $sudo_backup_log       )
+
+Variables used by firewall class:
+$sudo::params::firewall_source_real      = <%= scope.lookupvar('sudo::params::firewall_source_real')      %> ( Set with $sudo_firewall_source      )
+$sudo::params::firewall_destination_real = <%= scope.lookupvar('sudo::params::firewall_destination_real') %> ( Set with $sudo_firewall_destination )
+$sudo::params::firewall_enable           = <%= scope.lookupvar('sudo::params::firewall_destination_real') %> ( Set with $sudo_firewall_enable      )
+

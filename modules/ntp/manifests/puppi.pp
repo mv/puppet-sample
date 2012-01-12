@@ -1,4 +1,4 @@
-# Class: ntp::puppi
+# Class ntp::puppi
 #
 # This class manages the puppi extensions for the ntp module
 # It's automatically included and used if $puppi=yes

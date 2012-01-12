@@ -1,4 +1,4 @@
-# Class: ntp::firewall
+# Class ntp::firewall
 #
 # Manages ntp firewalling using custom Firewall wrapper
 # By default it opens ntp's default port(s) to anybody

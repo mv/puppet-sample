@@ -1,4 +1,4 @@
-# Class: ntp::firewall::absent
+# Class ntp::firewall::absent
 #
 # Remove ntp firewall elements
 #

@@ -1,4 +1,4 @@
-# Class: ntp::monitor::absent
+# Class ntp::monitor::absent
 #
 # Remove ntp monitor elements
 #

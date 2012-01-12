@@ -1,4 +1,4 @@
-# Class: ntp::install
+# Class ntp::install
 #
 # It defines package, service, main configuration file.
 #
@@ -38,6 +38,7 @@ class ntp::install {
         notify  => Service["ntp"],
         source  => ["puppet:///ntp/ntp.conf.${environment}",
                     "puppet:///ntp/ntp.conf"],
+        audit   => "all",
     }
 
     # Include OS specific subclasses, if necessary

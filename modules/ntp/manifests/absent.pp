@@ -1,4 +1,4 @@
-# Class: ntp::absent
+# Class ntp::absent
 #
 # Removes ntp package and its relevant monitor, backup, firewall entries
 #

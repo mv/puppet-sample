@@ -1,4 +1,4 @@
-# Class: ntp::monitor
+# Class ntp::monitor
 #
 # Monitors ntp process/ports/service using Example42 monitor meta module (to be adapted to custom monitor solutions)
 #

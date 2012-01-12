@@ -1,4 +1,4 @@
-# Class: ntp::backup::absent
+# Class ntp::backup::absent
 #
 # Remove ntp backup elements
 #

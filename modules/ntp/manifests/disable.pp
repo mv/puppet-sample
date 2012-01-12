@@ -1,4 +1,4 @@
-# Class: ntp::disable
+# Class ntp::disable
 #
 # Stops ntp service and disables it at boot time
 # Removes the monitor checks, but not the other extended elements (backup, firewall)

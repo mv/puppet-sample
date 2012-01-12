@@ -1,4 +1,4 @@
-# Class: ntp::remove
+# Class ntp::remove
 #
 # Removes ntp package and its relevant monitor, backup, firewall entries
 #
@@ -8,7 +8,7 @@
 
 class ntp::remove {
 
-	# wrapper: calls ntp::absent
+    # wrapper: calls ntp::absent
     require ntp::absent
 
 }

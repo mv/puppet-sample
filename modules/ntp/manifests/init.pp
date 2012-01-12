@@ -1,5 +1,5 @@
 #
-# Class: ntp
+# Class ntp
 #
 # Manages ntp.
 # Include it to install and run ntp

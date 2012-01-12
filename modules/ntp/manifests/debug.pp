@@ -1,5 +1,5 @@
 #
-# Class: ntp::debug
+# Class ntp::debug
 #
 # This class is used only for debugging purposes
 #

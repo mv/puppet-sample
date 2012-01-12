@@ -34,11 +34,11 @@ class ntp::install {
         owner   => "${ntp::params::config_file_owner}",
         group   => "${ntp::params::config_file_group}",
         ensure  => present,
+        audit   => "all",
         require => Package["ntp"],
         notify  => Service["ntp"],
         source  => ["puppet:///ntp/ntp.conf.${environment}",
                     "puppet:///ntp/ntp.conf"],
-        audit   => "all",
     }
 
     # Include OS specific subclasses, if necessary

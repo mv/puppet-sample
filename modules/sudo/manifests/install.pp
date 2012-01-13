@@ -27,24 +27,29 @@ class sudo::install {
 
     file { "sudoers":
         path    => "/etc/sudoers",
-        mode    => "440",
+        mode    => "0440",
+        backup  => '.bkp',
+        source  => ["puppet:///sudo/sudoers.%{location}",
+                    "puppet:///sudo/sudoers.vagrant",
+                    "puppet:///sudo/sudoers"],
     }
 
     file { "sudo":
         path    => "/usr/bin/sudo",
-        mode    => "01111",
+        mode    => "4111",
     }
 
     file { "sudoedit":
         path    => "/usr/bin/sudoedit",
-        mode    => "01111",
+        mode    => "4111",
     }
 
     file { "visudo":
         path    => "/usr/sbin/visudo",
-        mode    => "755",
+        mode    => "0755",
     }
 
+# /bin/ls -lh {/etc,/usr/bin}/*sudo*
 # rpm -ql sudo | grep -v share | xargs ls -lh
 #
 #     -r--r----- 1 root root 3.4K Dec 14 15:53 /etc/sudoers

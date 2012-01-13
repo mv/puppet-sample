@@ -14,7 +14,6 @@ node /node/ {
     include sudo
     include ntp
 	include openssh
-#   include ntp::remove
 }
 
 node /.*/ {

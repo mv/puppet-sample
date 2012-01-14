@@ -18,6 +18,7 @@ Vagrant::Config.run do |config|
     master.vm.network("192.168.10.50", :netmask => "255.255.255.0" )
     master.vm.share_folder "v-modules"  , "/etc/puppet/modules"  , "modules"
     master.vm.share_folder "v-manifests", "/etc/puppet/manifests", "manifests"
+    master.vm.boot_mode = :gui
   end
 
   config.vm.define :node1 do |node1|
@@ -25,6 +26,7 @@ Vagrant::Config.run do |config|
     node1.vm.network("192.168.10.51", :netmask => "255.255.255.0" )
     node1.vm.share_folder "v-modules"  , "/etc/puppet/modules"  , "modules"
     node1.vm.share_folder "v-manifests", "/etc/puppet/manifests", "manifests"
+    node1.vm.boot_mode = :gui
   end
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests

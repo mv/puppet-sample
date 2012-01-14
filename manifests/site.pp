@@ -4,16 +4,15 @@
 # $puppetserver = 'pp-master.local'
 
 node default {
-    include sudo
+    include motd
 	include ntp
-	include ssh
+	include openssh
+    include sudo
 }
 
 node /node/ {
-    include motd
-    include sudo
-    include ntp
-	include openssh
+#   include devel::install
+#   include devel::remove
 }
 
 node /.*/ {

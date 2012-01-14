@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module devel
+
+User variables (unfiltered):
+# $devel_server = <%= scope.lookupvar('devel_server') %>
+
+User variables (after params.pp filter):
+# $devel::params::server = <%= scope.lookupvar('devel::params::server') %>
+
+General internal variables:
+$devel::params::pkg_name          = <%= scope.lookupvar('devel::params::pkg_name')          %>
+$devel::params::service_name      = <%= scope.lookupvar('devel::params::service_name')      %>
+$devel::params::process_name      = <%= scope.lookupvar('devel::params::process_name')      %>
+$devel::params::has_status        = <%= scope.lookupvar('devel::params::has_status')        %>
+$devel::params::config_file       = <%= scope.lookupvar('devel::params::config_file')       %>
+$devel::params::config_file_mode  = <%= scope.lookupvar('devel::params::config_file_mode')  %>
+$devel::params::config_file_owner = <%= scope.lookupvar('devel::params::config_file_owner') %>
+$devel::params::config_file_group = <%= scope.lookupvar('devel::params::config_file_group') %>
+$devel::params::config_dir        = <%= scope.lookupvar('devel::params::config_dir')        %>
+$devel::params::initconfig_file   = <%= scope.lookupvar('devel::params::initconfig_file')   %>
+$devel::params::pid_file          = <%= scope.lookupvar('devel::params::pid_file')          %>
+$devel::params::data_dir          = <%= scope.lookupvar('devel::params::data_dir')          %>
+$devel::params::log_dir           = <%= scope.lookupvar('devel::params::log_dir')           %>
+$devel::params::protocol          = <%= scope.lookupvar('devel::params::protocol')          %>
+$devel::params::port              = <%= scope.lookupvar('devel::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/devel') %>
+
+Variables used by monitor class:
+$devel::params::monitor_target_real    = <%= scope.lookupvar('devel::params::monitor_target_real')    %> ( Set with $devel_monitor_target      )
+$devel::params::monitor_baseurl_real   = <%= scope.lookupvar('devel::params::monitor_baseurl_real')   %> ( Set with $devel_monitor_baseurl     )
+$devel::params::monitor_url_pattern    = <%= scope.lookupvar('devel::params::monitor_url_pattern')    %> ( Set with $devel_monitor_url_pattern )
+$devel::params::monitor_port_enable    = <%= scope.lookupvar('devel::params::monitor_port_enable')    %> ( Set with $devel_monitor_port        )
+$devel::params::monitor_url_enable     = <%= scope.lookupvar('devel::params::monitor_url_enable')     %> ( Set with $devel_monitor_url         )
+$devel::params::monitor_process_enable = <%= scope.lookupvar('devel::params::monitor_process_enable') %> ( Set with $devel_monitor_process     )
+$devel::params::monitor_plugin_enable  = <%= scope.lookupvar('devel::params::monitor_plugin_enable')  %> ( Set with $devel_monitor_plugin      )
+
+Variables used by backup class:
+$devel::params::backup_target_real = <%= scope.lookupvar('devel::params::backup_target_real') %> ( Set with $devel_backup_target    )
+$devel::params::backup_frequency   = <%= scope.lookupvar('devel::params::backup_frequency')   %> ( Set with $devel_backup_frequency )
+$devel::params::backup_data_enable = <%= scope.lookupvar('devel::params::backup_data_enable') %> ( Set with $devel_backup_data      )
+$devel::params::backup_log_enable  = <%= scope.lookupvar('devel::params::backup_log_enable')  %> ( Set with $devel_backup_log       )
+
+Variables used by firewall class:
+$devel::params::firewall_source_real      = <%= scope.lookupvar('devel::params::firewall_source_real')      %> ( Set with $devel_firewall_source      )
+$devel::params::firewall_destination_real = <%= scope.lookupvar('devel::params::firewall_destination_real') %> ( Set with $devel_firewall_destination )
+$devel::params::firewall_enable           = <%= scope.lookupvar('devel::params::firewall_destination_real') %> ( Set with $devel_firewall_enable      )
+

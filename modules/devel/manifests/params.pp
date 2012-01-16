@@ -28,6 +28,7 @@ class devel::params  {
                     "make",
                     "gcc",
                   ]
+    # curl -> openssl -> zlib
 
     # TODO: verify debian/ubuntu
     $deb_list = [ "libcurl4-gnutls-dev",

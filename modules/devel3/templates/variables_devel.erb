@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module devel3
+
+User variables (unfiltered):
+# $devel3_server = <%= scope.lookupvar('devel3_server') %>
+
+User variables (after params.pp filter):
+# $devel3::params::server = <%= scope.lookupvar('devel3::params::server') %>
+
+General internal variables:
+$devel3::params::pkg_name          = <%= scope.lookupvar('devel3::params::pkg_name')          %>
+$devel3::params::service_name      = <%= scope.lookupvar('devel3::params::service_name')      %>
+$devel3::params::process_name      = <%= scope.lookupvar('devel3::params::process_name')      %>
+$devel3::params::has_status        = <%= scope.lookupvar('devel3::params::has_status')        %>
+$devel3::params::config_file       = <%= scope.lookupvar('devel3::params::config_file')       %>
+$devel3::params::config_file_mode  = <%= scope.lookupvar('devel3::params::config_file_mode')  %>
+$devel3::params::config_file_owner = <%= scope.lookupvar('devel3::params::config_file_owner') %>
+$devel3::params::config_file_group = <%= scope.lookupvar('devel3::params::config_file_group') %>
+$devel3::params::config_dir        = <%= scope.lookupvar('devel3::params::config_dir')        %>
+$devel3::params::initconfig_file   = <%= scope.lookupvar('devel3::params::initconfig_file')   %>
+$devel3::params::pid_file          = <%= scope.lookupvar('devel3::params::pid_file')          %>
+$devel3::params::data_dir          = <%= scope.lookupvar('devel3::params::data_dir')          %>
+$devel3::params::log_dir           = <%= scope.lookupvar('devel3::params::log_dir')           %>
+$devel3::params::protocol          = <%= scope.lookupvar('devel3::params::protocol')          %>
+$devel3::params::port              = <%= scope.lookupvar('devel3::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/devel3') %>
+
+Variables used by monitor class:
+$devel3::params::monitor_target_real    = <%= scope.lookupvar('devel3::params::monitor_target_real')    %> ( Set with $devel3_monitor_target      )
+$devel3::params::monitor_baseurl_real   = <%= scope.lookupvar('devel3::params::monitor_baseurl_real')   %> ( Set with $devel3_monitor_baseurl     )
+$devel3::params::monitor_url_pattern    = <%= scope.lookupvar('devel3::params::monitor_url_pattern')    %> ( Set with $devel3_monitor_url_pattern )
+$devel3::params::monitor_port_enable    = <%= scope.lookupvar('devel3::params::monitor_port_enable')    %> ( Set with $devel3_monitor_port        )
+$devel3::params::monitor_url_enable     = <%= scope.lookupvar('devel3::params::monitor_url_enable')     %> ( Set with $devel3_monitor_url         )
+$devel3::params::monitor_process_enable = <%= scope.lookupvar('devel3::params::monitor_process_enable') %> ( Set with $devel3_monitor_process     )
+$devel3::params::monitor_plugin_enable  = <%= scope.lookupvar('devel3::params::monitor_plugin_enable')  %> ( Set with $devel3_monitor_plugin      )
+
+Variables used by backup class:
+$devel3::params::backup_target_real = <%= scope.lookupvar('devel3::params::backup_target_real') %> ( Set with $devel3_backup_target    )
+$devel3::params::backup_frequency   = <%= scope.lookupvar('devel3::params::backup_frequency')   %> ( Set with $devel3_backup_frequency )
+$devel3::params::backup_data_enable = <%= scope.lookupvar('devel3::params::backup_data_enable') %> ( Set with $devel3_backup_data      )
+$devel3::params::backup_log_enable  = <%= scope.lookupvar('devel3::params::backup_log_enable')  %> ( Set with $devel3_backup_log       )
+
+Variables used by firewall class:
+$devel3::params::firewall_source_real      = <%= scope.lookupvar('devel3::params::firewall_source_real')      %> ( Set with $devel3_firewall_source      )
+$devel3::params::firewall_destination_real = <%= scope.lookupvar('devel3::params::firewall_destination_real') %> ( Set with $devel3_firewall_destination )
+$devel3::params::firewall_enable           = <%= scope.lookupvar('devel3::params::firewall_destination_real') %> ( Set with $devel3_firewall_enable      )
+

@@ -5,19 +5,19 @@
 
 node default {
     include motd
-	include ntp
-	include openssh
+    include ntp
+    include openssh
     include sudo
+
 }
 
 node /node/ {
+#   include devel3
+    include devel3::remove
+#   include devel2
+#   include devel2::remove
 #   include devel::install
 #   include devel::remove
-}
-
-node /.*/ {
-    include motd
-	include hbase::remove
 }
 
 
@@ -41,6 +41,16 @@ node /.*/ {
 # /etc/puppet/config/localtion_aws.yml
 # /etc/puppet/config/localtion_joyent.yml
 # /etc/puppet/config/common.yml
+
+/* node default {                     */
+
+/*     # read /etc/node/this-node.yml */
+/*     include nodes::setup           */
+
+/*     # implement 'has_role' rules   */
+/*     include truth::enforcer        */
+
+/* }                                  */
 
 
 

@@ -23,10 +23,10 @@ class devel::params  {
                     "kernel-devel",
                     "kernel-headers",
                     "glibc-headers",
-                    "rpm-build",
-                    "rpm-devel",
                     "make",
                     "gcc",
+                    "rpm-build",
+                    "rpm-devel",
                   ]
     # curl -> openssl -> zlib
 

@@ -8,12 +8,17 @@ node default {
     include ntp
     include openssh
     include sudo
-
+    include puppet
 }
 
 node /node/ {
-#   include devel3
-    include devel3::remove
+    include motd
+    include ntp
+    include openssh
+    include sudo
+    include puppet
+    include devel3
+#   include devel3::remove
 #   include devel2
 #   include devel2::remove
 #   include devel::install

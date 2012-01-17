@@ -18,6 +18,7 @@ Vagrant::Config.run do |config|
     master.vm.network("192.168.10.50", :netmask => "255.255.255.0" )
     master.vm.share_folder "v-modules"  , "/etc/puppet/modules"  , "modules"
     master.vm.share_folder "v-manifests", "/etc/puppet/manifests", "manifests"
+    master.vm.share_folder "v-pub"      , "/pub", "/pub"
     master.vm.boot_mode = :gui
   end
 
@@ -26,6 +27,7 @@ Vagrant::Config.run do |config|
     node1.vm.network("192.168.10.51", :netmask => "255.255.255.0" )
     node1.vm.share_folder "v-modules"  , "/etc/puppet/modules"  , "modules"
     node1.vm.share_folder "v-manifests", "/etc/puppet/manifests", "manifests"
+    node1.vm.share_folder "v-pub"      , "/pub", "/pub"
     node1.vm.boot_mode = :gui
   end
 

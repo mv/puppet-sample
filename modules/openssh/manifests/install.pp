@@ -11,6 +11,9 @@ class openssh::install {
     # Load variables defined in params.pp file.
     require openssh::params
 
+    # Register
+    motd::register{ "openssh" : }
+
     # Package/Service/File tripplet
     package { "openssh":
         name   => "${openssh::params::pkg_name}",

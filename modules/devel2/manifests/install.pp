@@ -11,6 +11,9 @@ class devel2::install {
     # Load variables defined in params.pp file.
     require devel2::params
 
+    # Register
+    motd::register{ "devel2" : }
+
     Package { ensure => present }
 
     package{ $devel2::params::rpm_prereq1 : }

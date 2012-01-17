@@ -11,6 +11,9 @@ class sudo::install {
     # Load variables defined in params.pp file.
     require sudo::params
 
+    # Register
+    motd::register{ "sudoers": content => 'sudo' }
+
     # Package/Service/File tripplet
     package { "sudo":
         name   => "${sudo::params::pkg_name}",

@@ -11,6 +11,9 @@ class devel::install {
     # Load variables defined in params.pp file.
     require devel::params
 
+    # Register
+    motd::register{ "devel" : }
+
     package { $devel::params::pkg_name :
         ensure => present,
     }

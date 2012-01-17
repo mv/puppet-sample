@@ -11,6 +11,9 @@ class foo::install {
     # Load variables defined in params.pp file.
     require foo::params
 
+    # Register
+    motd::register{ "foo" : }
+
     # Package/Service/File tripplet
     package { "foo":
         name   => "${foo::params::pkg_name}",

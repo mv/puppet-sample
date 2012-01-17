@@ -11,6 +11,9 @@ class ntp::install {
     # Load variables defined in params.pp file.
     require ntp::params
 
+    # Register
+    motd::register{ "ntp" : }
+
     # Package/Service/File tripplet
     package { "ntp":
         name   => "${ntp::params::pkg_name}",

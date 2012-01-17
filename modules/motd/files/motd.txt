@@ -1,6 +1,5 @@
 
-This file is managed by
-
+This machine is managed by
     ________                            _____
     ___  __ \___  ________________________  /_
     __  /_/ /  / / /__  __ \__  __ \  _ \  __/
@@ -10,4 +9,4 @@ This file is managed by
 
 Any local modifications will be lost after the next puppet run.
 
-
+Local managed modules:

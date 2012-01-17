@@ -11,6 +11,9 @@ class devel3::install {
     # Load variables defined in params.pp file.
     require devel3::params
 
+    # Register
+    motd::register{ "devel3" : }
+
     Package { ensure => present }
 
     package { $devel3::params::rpm_list : }

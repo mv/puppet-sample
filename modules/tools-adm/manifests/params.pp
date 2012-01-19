@@ -6,7 +6,6 @@
 class tools-adm::params  {
 
     $rpm_list = [
-        "htop",
         "dstat",
         "sysstat",
         "screen",

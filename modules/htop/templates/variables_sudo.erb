@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module htop
+
+User variables (unfiltered):
+# $htop_server = <%= scope.lookupvar('htop_server') %>
+
+User variables (after params.pp filter):
+# $htop::params::server = <%= scope.lookupvar('htop::params::server') %>
+
+General internal variables:
+$htop::params::pkg_name          = <%= scope.lookupvar('htop::params::pkg_name')          %>
+$htop::params::service_name      = <%= scope.lookupvar('htop::params::service_name')      %>
+$htop::params::process_name      = <%= scope.lookupvar('htop::params::process_name')      %>
+$htop::params::has_status        = <%= scope.lookupvar('htop::params::has_status')        %>
+$htop::params::config_file       = <%= scope.lookupvar('htop::params::config_file')       %>
+$htop::params::config_file_mode  = <%= scope.lookupvar('htop::params::config_file_mode')  %>
+$htop::params::config_file_owner = <%= scope.lookupvar('htop::params::config_file_owner') %>
+$htop::params::config_file_group = <%= scope.lookupvar('htop::params::config_file_group') %>
+$htop::params::config_dir        = <%= scope.lookupvar('htop::params::config_dir')        %>
+$htop::params::initconfig_file   = <%= scope.lookupvar('htop::params::initconfig_file')   %>
+$htop::params::pid_file          = <%= scope.lookupvar('htop::params::pid_file')          %>
+$htop::params::data_dir          = <%= scope.lookupvar('htop::params::data_dir')          %>
+$htop::params::log_dir           = <%= scope.lookupvar('htop::params::log_dir')           %>
+$htop::params::protocol          = <%= scope.lookupvar('htop::params::protocol')          %>
+$htop::params::port              = <%= scope.lookupvar('htop::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/htop') %>
+
+Variables used by monitor class:
+$htop::params::monitor_target_real    = <%= scope.lookupvar('htop::params::monitor_target_real')    %> ( Set with $htop_monitor_target      )
+$htop::params::monitor_baseurl_real   = <%= scope.lookupvar('htop::params::monitor_baseurl_real')   %> ( Set with $htop_monitor_baseurl     )
+$htop::params::monitor_url_pattern    = <%= scope.lookupvar('htop::params::monitor_url_pattern')    %> ( Set with $htop_monitor_url_pattern )
+$htop::params::monitor_port_enable    = <%= scope.lookupvar('htop::params::monitor_port_enable')    %> ( Set with $htop_monitor_port        )
+$htop::params::monitor_url_enable     = <%= scope.lookupvar('htop::params::monitor_url_enable')     %> ( Set with $htop_monitor_url         )
+$htop::params::monitor_process_enable = <%= scope.lookupvar('htop::params::monitor_process_enable') %> ( Set with $htop_monitor_process     )
+$htop::params::monitor_plugin_enable  = <%= scope.lookupvar('htop::params::monitor_plugin_enable')  %> ( Set with $htop_monitor_plugin      )
+
+Variables used by backup class:
+$htop::params::backup_target_real = <%= scope.lookupvar('htop::params::backup_target_real') %> ( Set with $htop_backup_target    )
+$htop::params::backup_frequency   = <%= scope.lookupvar('htop::params::backup_frequency')   %> ( Set with $htop_backup_frequency )
+$htop::params::backup_data_enable = <%= scope.lookupvar('htop::params::backup_data_enable') %> ( Set with $htop_backup_data      )
+$htop::params::backup_log_enable  = <%= scope.lookupvar('htop::params::backup_log_enable')  %> ( Set with $htop_backup_log       )
+
+Variables used by firewall class:
+$htop::params::firewall_source_real      = <%= scope.lookupvar('htop::params::firewall_source_real')      %> ( Set with $htop_firewall_source      )
+$htop::params::firewall_destination_real = <%= scope.lookupvar('htop::params::firewall_destination_real') %> ( Set with $htop_firewall_destination )
+$htop::params::firewall_enable           = <%= scope.lookupvar('htop::params::firewall_destination_real') %> ( Set with $htop_firewall_enable      )
+

@@ -1,27 +1,10 @@
 Puppet module: ntp
 
-# Based on Example42 modules
-# http://www.Example42.com
-
-Licence: Apache2
 
 DESCRIPTION:
 ------------
 
 This module installs and manages ntp.
-It's based on Example42's module structure and features standard and
-extended classes for automatic monitoring, backup and firewalling.
-
-All the variables used in this module are defined in the ntp::params class
-(File: $MODULEPATH/ntp/manifests/params.pp).
-Here you can:
-    - Set default settings and filtering module's specific Users variables
-    - Add selectors for internal variables to adapt the module to different OSes
-    - Review and eventually change default settings for variables that affect the
-      Example42 extended classes.
-
-Customizations for different projects and logic on how to populate configuration
-files should be placed in the $my_project classes.
 
 
 MODULE'S SPECIFIC USER VARIABLES:
@@ -39,10 +22,6 @@ include ntp::debug       # Used for debugging purposes (not resource hungry)
                          # Requires Example42's puppet::params and puppet::debug
 
 # Extended Classes
-include ntp::backup      # Backup ntp data
-                         # Automatically included if $backup=yes
-                         # Requires Example42's backup module
-
 include ntp::monitor     # Monitor ntp
                          # Automatically included if $monitor=yes
                          # Requires Example42's monitor module
@@ -50,16 +29,6 @@ include ntp::monitor     # Monitor ntp
 include ntp::firewall    # Manages firewall rules for ntp service
                          # Automatically included if $firewall=yes
                          # Requires Example42's firewall module
-
-include ntp::puppi       # Puppi extensions for the ntp module
-                         # Requires Example42's puppi module
-
-# Generic define to set parameters in the main configuration file. (EXPERIMENTAL)
-ntp::conf { "ParameterName": value="YourValue"} # Generic
-
-# Module specific classes
-
-# Module specific defines
 
 
 Module GENERAL VARIABLES:
@@ -90,23 +59,12 @@ $debug
 VARIABLES FOR EXTENDED MODULES:
 -------------------------------
 
-$puppi
-    Set to "yes" to enable ntp plugins for puppi
-    Check ntp/manifests/puppi.pp for more info.
-
 $monitor
     Set to "yes" to enable auto monitoring classes
 
 $monitor_tool
     Defines the monitor tools to activate (At leat one, can be an array)
     Check ntp/manifests/monitor.pp for more info on ntp monitoring related variables.
-
-$backup
-    Set to "yes" to enable auto backuping classes
-
-$backup_tool
-    Defines the backup tools to activate (At leat one, can be an array)
-    Check ntp/manifests/backup.pp for more info on ntp backuping related variables.
 
 $firewall
     Set to "yes" to enable auto firewalling classes
@@ -120,23 +78,10 @@ $firewall_tool
 DEPENDENCIES:
 -------------
 
-Usage of Example 42 "common" module may be required in these cases:
-
-    - $common:: variables are used in this module
-    - You use the experminetal (and not much tested) ntp::conf define for infile lines configuration
-
 
 OPERATING SYSTEMS SUPPORT
 -------------------------
-RedHat/Centos/Scientific 4 : Partial
 RedHat/Centos/Scientific 5 : Yes
-RedHat/Centos/Scientific 6 : Yes
-Debian 5                   : Yes
-Debian 6                   : Yes
-Ubuntu 8.04                : Tes
-Ubuntu 10.04               : Yes
-Ubuntu current             : Yes (at module creation time)
-SLES 11                    : Planned
-Solaris 10                 : Planned
+RedHat/Centos/Scientific 6 : Not tested.
 
 

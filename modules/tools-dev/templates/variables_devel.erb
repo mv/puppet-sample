@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module tools-dev
+
+User variables (unfiltered):
+# $tools-dev_server = <%= scope.lookupvar('tools-dev_server') %>
+
+User variables (after params.pp filter):
+# $tools-dev::params::server = <%= scope.lookupvar('tools-dev::params::server') %>
+
+General internal variables:
+$tools-dev::params::pkg_name          = <%= scope.lookupvar('tools-dev::params::pkg_name')          %>
+$tools-dev::params::service_name      = <%= scope.lookupvar('tools-dev::params::service_name')      %>
+$tools-dev::params::process_name      = <%= scope.lookupvar('tools-dev::params::process_name')      %>
+$tools-dev::params::has_status        = <%= scope.lookupvar('tools-dev::params::has_status')        %>
+$tools-dev::params::config_file       = <%= scope.lookupvar('tools-dev::params::config_file')       %>
+$tools-dev::params::config_file_mode  = <%= scope.lookupvar('tools-dev::params::config_file_mode')  %>
+$tools-dev::params::config_file_owner = <%= scope.lookupvar('tools-dev::params::config_file_owner') %>
+$tools-dev::params::config_file_group = <%= scope.lookupvar('tools-dev::params::config_file_group') %>
+$tools-dev::params::config_dir        = <%= scope.lookupvar('tools-dev::params::config_dir')        %>
+$tools-dev::params::initconfig_file   = <%= scope.lookupvar('tools-dev::params::initconfig_file')   %>
+$tools-dev::params::pid_file          = <%= scope.lookupvar('tools-dev::params::pid_file')          %>
+$tools-dev::params::data_dir          = <%= scope.lookupvar('tools-dev::params::data_dir')          %>
+$tools-dev::params::log_dir           = <%= scope.lookupvar('tools-dev::params::log_dir')           %>
+$tools-dev::params::protocol          = <%= scope.lookupvar('tools-dev::params::protocol')          %>
+$tools-dev::params::port              = <%= scope.lookupvar('tools-dev::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/tools-dev') %>
+
+Variables used by monitor class:
+$tools-dev::params::monitor_target_real    = <%= scope.lookupvar('tools-dev::params::monitor_target_real')    %> ( Set with $tools-dev_monitor_target      )
+$tools-dev::params::monitor_baseurl_real   = <%= scope.lookupvar('tools-dev::params::monitor_baseurl_real')   %> ( Set with $tools-dev_monitor_baseurl     )
+$tools-dev::params::monitor_url_pattern    = <%= scope.lookupvar('tools-dev::params::monitor_url_pattern')    %> ( Set with $tools-dev_monitor_url_pattern )
+$tools-dev::params::monitor_port_enable    = <%= scope.lookupvar('tools-dev::params::monitor_port_enable')    %> ( Set with $tools-dev_monitor_port        )
+$tools-dev::params::monitor_url_enable     = <%= scope.lookupvar('tools-dev::params::monitor_url_enable')     %> ( Set with $tools-dev_monitor_url         )
+$tools-dev::params::monitor_process_enable = <%= scope.lookupvar('tools-dev::params::monitor_process_enable') %> ( Set with $tools-dev_monitor_process     )
+$tools-dev::params::monitor_plugin_enable  = <%= scope.lookupvar('tools-dev::params::monitor_plugin_enable')  %> ( Set with $tools-dev_monitor_plugin      )
+
+Variables used by backup class:
+$tools-dev::params::backup_target_real = <%= scope.lookupvar('tools-dev::params::backup_target_real') %> ( Set with $tools-dev_backup_target    )
+$tools-dev::params::backup_frequency   = <%= scope.lookupvar('tools-dev::params::backup_frequency')   %> ( Set with $tools-dev_backup_frequency )
+$tools-dev::params::backup_data_enable = <%= scope.lookupvar('tools-dev::params::backup_data_enable') %> ( Set with $tools-dev_backup_data      )
+$tools-dev::params::backup_log_enable  = <%= scope.lookupvar('tools-dev::params::backup_log_enable')  %> ( Set with $tools-dev_backup_log       )
+
+Variables used by firewall class:
+$tools-dev::params::firewall_source_real      = <%= scope.lookupvar('tools-dev::params::firewall_source_real')      %> ( Set with $tools-dev_firewall_source      )
+$tools-dev::params::firewall_destination_real = <%= scope.lookupvar('tools-dev::params::firewall_destination_real') %> ( Set with $tools-dev_firewall_destination )
+$tools-dev::params::firewall_enable           = <%= scope.lookupvar('tools-dev::params::firewall_destination_real') %> ( Set with $tools-dev_firewall_enable      )
+

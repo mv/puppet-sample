@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module tools-net
+
+User variables (unfiltered):
+# $tools-net_server = <%= scope.lookupvar('tools-net_server') %>
+
+User variables (after params.pp filter):
+# $tools-net::params::server = <%= scope.lookupvar('tools-net::params::server') %>
+
+General internal variables:
+$tools-net::params::pkg_name          = <%= scope.lookupvar('tools-net::params::pkg_name')          %>
+$tools-net::params::service_name      = <%= scope.lookupvar('tools-net::params::service_name')      %>
+$tools-net::params::process_name      = <%= scope.lookupvar('tools-net::params::process_name')      %>
+$tools-net::params::has_status        = <%= scope.lookupvar('tools-net::params::has_status')        %>
+$tools-net::params::config_file       = <%= scope.lookupvar('tools-net::params::config_file')       %>
+$tools-net::params::config_file_mode  = <%= scope.lookupvar('tools-net::params::config_file_mode')  %>
+$tools-net::params::config_file_owner = <%= scope.lookupvar('tools-net::params::config_file_owner') %>
+$tools-net::params::config_file_group = <%= scope.lookupvar('tools-net::params::config_file_group') %>
+$tools-net::params::config_dir        = <%= scope.lookupvar('tools-net::params::config_dir')        %>
+$tools-net::params::initconfig_file   = <%= scope.lookupvar('tools-net::params::initconfig_file')   %>
+$tools-net::params::pid_file          = <%= scope.lookupvar('tools-net::params::pid_file')          %>
+$tools-net::params::data_dir          = <%= scope.lookupvar('tools-net::params::data_dir')          %>
+$tools-net::params::log_dir           = <%= scope.lookupvar('tools-net::params::log_dir')           %>
+$tools-net::params::protocol          = <%= scope.lookupvar('tools-net::params::protocol')          %>
+$tools-net::params::port              = <%= scope.lookupvar('tools-net::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/tools-net') %>
+
+Variables used by monitor class:
+$tools-net::params::monitor_target_real    = <%= scope.lookupvar('tools-net::params::monitor_target_real')    %> ( Set with $tools-net_monitor_target      )
+$tools-net::params::monitor_baseurl_real   = <%= scope.lookupvar('tools-net::params::monitor_baseurl_real')   %> ( Set with $tools-net_monitor_baseurl     )
+$tools-net::params::monitor_url_pattern    = <%= scope.lookupvar('tools-net::params::monitor_url_pattern')    %> ( Set with $tools-net_monitor_url_pattern )
+$tools-net::params::monitor_port_enable    = <%= scope.lookupvar('tools-net::params::monitor_port_enable')    %> ( Set with $tools-net_monitor_port        )
+$tools-net::params::monitor_url_enable     = <%= scope.lookupvar('tools-net::params::monitor_url_enable')     %> ( Set with $tools-net_monitor_url         )
+$tools-net::params::monitor_process_enable = <%= scope.lookupvar('tools-net::params::monitor_process_enable') %> ( Set with $tools-net_monitor_process     )
+$tools-net::params::monitor_plugin_enable  = <%= scope.lookupvar('tools-net::params::monitor_plugin_enable')  %> ( Set with $tools-net_monitor_plugin      )
+
+Variables used by backup class:
+$tools-net::params::backup_target_real = <%= scope.lookupvar('tools-net::params::backup_target_real') %> ( Set with $tools-net_backup_target    )
+$tools-net::params::backup_frequency   = <%= scope.lookupvar('tools-net::params::backup_frequency')   %> ( Set with $tools-net_backup_frequency )
+$tools-net::params::backup_data_enable = <%= scope.lookupvar('tools-net::params::backup_data_enable') %> ( Set with $tools-net_backup_data      )
+$tools-net::params::backup_log_enable  = <%= scope.lookupvar('tools-net::params::backup_log_enable')  %> ( Set with $tools-net_backup_log       )
+
+Variables used by firewall class:
+$tools-net::params::firewall_source_real      = <%= scope.lookupvar('tools-net::params::firewall_source_real')      %> ( Set with $tools-net_firewall_source      )
+$tools-net::params::firewall_destination_real = <%= scope.lookupvar('tools-net::params::firewall_destination_real') %> ( Set with $tools-net_firewall_destination )
+$tools-net::params::firewall_enable           = <%= scope.lookupvar('tools-net::params::firewall_destination_real') %> ( Set with $tools-net_firewall_enable      )
+

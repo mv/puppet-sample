@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module snmp
+
+User variables (unfiltered):
+# $snmp_server = <%= scope.lookupvar('snmp_server') %>
+
+User variables (after params.pp filter):
+# $snmp::params::server = <%= scope.lookupvar('snmp::params::server') %>
+
+General internal variables:
+$snmp::params::pkg_name          = <%= scope.lookupvar('snmp::params::pkg_name')          %>
+$snmp::params::service_name      = <%= scope.lookupvar('snmp::params::service_name')      %>
+$snmp::params::process_name      = <%= scope.lookupvar('snmp::params::process_name')      %>
+$snmp::params::has_status        = <%= scope.lookupvar('snmp::params::has_status')        %>
+$snmp::params::config_file       = <%= scope.lookupvar('snmp::params::config_file')       %>
+$snmp::params::config_file_mode  = <%= scope.lookupvar('snmp::params::config_file_mode')  %>
+$snmp::params::config_file_owner = <%= scope.lookupvar('snmp::params::config_file_owner') %>
+$snmp::params::config_file_group = <%= scope.lookupvar('snmp::params::config_file_group') %>
+$snmp::params::config_dir        = <%= scope.lookupvar('snmp::params::config_dir')        %>
+$snmp::params::initconfig_file   = <%= scope.lookupvar('snmp::params::initconfig_file')   %>
+$snmp::params::pid_file          = <%= scope.lookupvar('snmp::params::pid_file')          %>
+$snmp::params::data_dir          = <%= scope.lookupvar('snmp::params::data_dir')          %>
+$snmp::params::log_dir           = <%= scope.lookupvar('snmp::params::log_dir')           %>
+$snmp::params::protocol          = <%= scope.lookupvar('snmp::params::protocol')          %>
+$snmp::params::port              = <%= scope.lookupvar('snmp::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/snmp') %>
+
+Variables used by monitor class:
+$snmp::params::monitor_target_real    = <%= scope.lookupvar('snmp::params::monitor_target_real')    %> ( Set with $snmp_monitor_target      )
+$snmp::params::monitor_baseurl_real   = <%= scope.lookupvar('snmp::params::monitor_baseurl_real')   %> ( Set with $snmp_monitor_baseurl     )
+$snmp::params::monitor_url_pattern    = <%= scope.lookupvar('snmp::params::monitor_url_pattern')    %> ( Set with $snmp_monitor_url_pattern )
+$snmp::params::monitor_port_enable    = <%= scope.lookupvar('snmp::params::monitor_port_enable')    %> ( Set with $snmp_monitor_port        )
+$snmp::params::monitor_url_enable     = <%= scope.lookupvar('snmp::params::monitor_url_enable')     %> ( Set with $snmp_monitor_url         )
+$snmp::params::monitor_process_enable = <%= scope.lookupvar('snmp::params::monitor_process_enable') %> ( Set with $snmp_monitor_process     )
+$snmp::params::monitor_plugin_enable  = <%= scope.lookupvar('snmp::params::monitor_plugin_enable')  %> ( Set with $snmp_monitor_plugin      )
+
+Variables used by backup class:
+$snmp::params::backup_target_real = <%= scope.lookupvar('snmp::params::backup_target_real') %> ( Set with $snmp_backup_target    )
+$snmp::params::backup_frequency   = <%= scope.lookupvar('snmp::params::backup_frequency')   %> ( Set with $snmp_backup_frequency )
+$snmp::params::backup_data_enable = <%= scope.lookupvar('snmp::params::backup_data_enable') %> ( Set with $snmp_backup_data      )
+$snmp::params::backup_log_enable  = <%= scope.lookupvar('snmp::params::backup_log_enable')  %> ( Set with $snmp_backup_log       )
+
+Variables used by firewall class:
+$snmp::params::firewall_source_real      = <%= scope.lookupvar('snmp::params::firewall_source_real')      %> ( Set with $snmp_firewall_source      )
+$snmp::params::firewall_destination_real = <%= scope.lookupvar('snmp::params::firewall_destination_real') %> ( Set with $snmp_firewall_destination )
+$snmp::params::firewall_enable           = <%= scope.lookupvar('snmp::params::firewall_destination_real') %> ( Set with $snmp_firewall_enable      )
+

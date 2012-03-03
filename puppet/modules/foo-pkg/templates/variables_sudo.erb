@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module foo-pkg
+
+User variables (unfiltered):
+# $foo-pkg_server = <%= scope.lookupvar('foo-pkg_server') %>
+
+User variables (after params.pp filter):
+# $foo-pkg::params::server = <%= scope.lookupvar('foo-pkg::params::server') %>
+
+General internal variables:
+$foo-pkg::params::pkg_name          = <%= scope.lookupvar('foo-pkg::params::pkg_name')          %>
+$foo-pkg::params::service_name      = <%= scope.lookupvar('foo-pkg::params::service_name')      %>
+$foo-pkg::params::process_name      = <%= scope.lookupvar('foo-pkg::params::process_name')      %>
+$foo-pkg::params::has_status        = <%= scope.lookupvar('foo-pkg::params::has_status')        %>
+$foo-pkg::params::config_file       = <%= scope.lookupvar('foo-pkg::params::config_file')       %>
+$foo-pkg::params::config_file_mode  = <%= scope.lookupvar('foo-pkg::params::config_file_mode')  %>
+$foo-pkg::params::config_file_owner = <%= scope.lookupvar('foo-pkg::params::config_file_owner') %>
+$foo-pkg::params::config_file_group = <%= scope.lookupvar('foo-pkg::params::config_file_group') %>
+$foo-pkg::params::config_dir        = <%= scope.lookupvar('foo-pkg::params::config_dir')        %>
+$foo-pkg::params::initconfig_file   = <%= scope.lookupvar('foo-pkg::params::initconfig_file')   %>
+$foo-pkg::params::pid_file          = <%= scope.lookupvar('foo-pkg::params::pid_file')          %>
+$foo-pkg::params::data_dir          = <%= scope.lookupvar('foo-pkg::params::data_dir')          %>
+$foo-pkg::params::log_dir           = <%= scope.lookupvar('foo-pkg::params::log_dir')           %>
+$foo-pkg::params::protocol          = <%= scope.lookupvar('foo-pkg::params::protocol')          %>
+$foo-pkg::params::port              = <%= scope.lookupvar('foo-pkg::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/foo-pkg') %>
+
+Variables used by monitor class:
+$foo-pkg::params::monitor_target_real    = <%= scope.lookupvar('foo-pkg::params::monitor_target_real')    %> ( Set with $foo-pkg_monitor_target      )
+$foo-pkg::params::monitor_baseurl_real   = <%= scope.lookupvar('foo-pkg::params::monitor_baseurl_real')   %> ( Set with $foo-pkg_monitor_baseurl     )
+$foo-pkg::params::monitor_url_pattern    = <%= scope.lookupvar('foo-pkg::params::monitor_url_pattern')    %> ( Set with $foo-pkg_monitor_url_pattern )
+$foo-pkg::params::monitor_port_enable    = <%= scope.lookupvar('foo-pkg::params::monitor_port_enable')    %> ( Set with $foo-pkg_monitor_port        )
+$foo-pkg::params::monitor_url_enable     = <%= scope.lookupvar('foo-pkg::params::monitor_url_enable')     %> ( Set with $foo-pkg_monitor_url         )
+$foo-pkg::params::monitor_process_enable = <%= scope.lookupvar('foo-pkg::params::monitor_process_enable') %> ( Set with $foo-pkg_monitor_process     )
+$foo-pkg::params::monitor_plugin_enable  = <%= scope.lookupvar('foo-pkg::params::monitor_plugin_enable')  %> ( Set with $foo-pkg_monitor_plugin      )
+
+Variables used by backup class:
+$foo-pkg::params::backup_target_real = <%= scope.lookupvar('foo-pkg::params::backup_target_real') %> ( Set with $foo-pkg_backup_target    )
+$foo-pkg::params::backup_frequency   = <%= scope.lookupvar('foo-pkg::params::backup_frequency')   %> ( Set with $foo-pkg_backup_frequency )
+$foo-pkg::params::backup_data_enable = <%= scope.lookupvar('foo-pkg::params::backup_data_enable') %> ( Set with $foo-pkg_backup_data      )
+$foo-pkg::params::backup_log_enable  = <%= scope.lookupvar('foo-pkg::params::backup_log_enable')  %> ( Set with $foo-pkg_backup_log       )
+
+Variables used by firewall class:
+$foo-pkg::params::firewall_source_real      = <%= scope.lookupvar('foo-pkg::params::firewall_source_real')      %> ( Set with $foo-pkg_firewall_source      )
+$foo-pkg::params::firewall_destination_real = <%= scope.lookupvar('foo-pkg::params::firewall_destination_real') %> ( Set with $foo-pkg_firewall_destination )
+$foo-pkg::params::firewall_enable           = <%= scope.lookupvar('foo-pkg::params::firewall_destination_real') %> ( Set with $foo-pkg_firewall_enable      )
+

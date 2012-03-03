@@ -1,0 +1,50 @@
+# File Managed By Puppet
+
+These are the variables used by the module foo-pkg-service
+
+User variables (unfiltered):
+# $foo-pkg-service_server = <%= scope.lookupvar('foo-pkg-service_server') %>
+
+User variables (after params.pp filter):
+# $foo-pkg-service::params::server = <%= scope.lookupvar('foo-pkg-service::params::server') %>
+
+General internal variables:
+$foo-pkg-service::params::pkg_name          = <%= scope.lookupvar('foo-pkg-service::params::pkg_name')          %>
+$foo-pkg-service::params::service_name      = <%= scope.lookupvar('foo-pkg-service::params::service_name')      %>
+$foo-pkg-service::params::process_name      = <%= scope.lookupvar('foo-pkg-service::params::process_name')      %>
+$foo-pkg-service::params::has_status        = <%= scope.lookupvar('foo-pkg-service::params::has_status')        %>
+$foo-pkg-service::params::config_file       = <%= scope.lookupvar('foo-pkg-service::params::config_file')       %>
+$foo-pkg-service::params::config_file_mode  = <%= scope.lookupvar('foo-pkg-service::params::config_file_mode')  %>
+$foo-pkg-service::params::config_file_owner = <%= scope.lookupvar('foo-pkg-service::params::config_file_owner') %>
+$foo-pkg-service::params::config_file_group = <%= scope.lookupvar('foo-pkg-service::params::config_file_group') %>
+$foo-pkg-service::params::config_dir        = <%= scope.lookupvar('foo-pkg-service::params::config_dir')        %>
+$foo-pkg-service::params::initconfig_file   = <%= scope.lookupvar('foo-pkg-service::params::initconfig_file')   %>
+$foo-pkg-service::params::pid_file          = <%= scope.lookupvar('foo-pkg-service::params::pid_file')          %>
+$foo-pkg-service::params::data_dir          = <%= scope.lookupvar('foo-pkg-service::params::data_dir')          %>
+$foo-pkg-service::params::log_dir           = <%= scope.lookupvar('foo-pkg-service::params::log_dir')           %>
+$foo-pkg-service::params::protocol          = <%= scope.lookupvar('foo-pkg-service::params::protocol')          %>
+$foo-pkg-service::params::port              = <%= scope.lookupvar('foo-pkg-service::params::port')              %>
+
+Puppet variables:
+$puppet::params::debugdir       = <%= scope.lookupvar('puppet::params::debugdir}/variables/foo-pkg-service') %>
+
+Variables used by monitor class:
+$foo-pkg-service::params::monitor_target_real    = <%= scope.lookupvar('foo-pkg-service::params::monitor_target_real')    %> ( Set with $foo-pkg-service_monitor_target      )
+$foo-pkg-service::params::monitor_baseurl_real   = <%= scope.lookupvar('foo-pkg-service::params::monitor_baseurl_real')   %> ( Set with $foo-pkg-service_monitor_baseurl     )
+$foo-pkg-service::params::monitor_url_pattern    = <%= scope.lookupvar('foo-pkg-service::params::monitor_url_pattern')    %> ( Set with $foo-pkg-service_monitor_url_pattern )
+$foo-pkg-service::params::monitor_port_enable    = <%= scope.lookupvar('foo-pkg-service::params::monitor_port_enable')    %> ( Set with $foo-pkg-service_monitor_port        )
+$foo-pkg-service::params::monitor_url_enable     = <%= scope.lookupvar('foo-pkg-service::params::monitor_url_enable')     %> ( Set with $foo-pkg-service_monitor_url         )
+$foo-pkg-service::params::monitor_process_enable = <%= scope.lookupvar('foo-pkg-service::params::monitor_process_enable') %> ( Set with $foo-pkg-service_monitor_process     )
+$foo-pkg-service::params::monitor_plugin_enable  = <%= scope.lookupvar('foo-pkg-service::params::monitor_plugin_enable')  %> ( Set with $foo-pkg-service_monitor_plugin      )
+
+Variables used by backup class:
+$foo-pkg-service::params::backup_target_real = <%= scope.lookupvar('foo-pkg-service::params::backup_target_real') %> ( Set with $foo-pkg-service_backup_target    )
+$foo-pkg-service::params::backup_frequency   = <%= scope.lookupvar('foo-pkg-service::params::backup_frequency')   %> ( Set with $foo-pkg-service_backup_frequency )
+$foo-pkg-service::params::backup_data_enable = <%= scope.lookupvar('foo-pkg-service::params::backup_data_enable') %> ( Set with $foo-pkg-service_backup_data      )
+$foo-pkg-service::params::backup_log_enable  = <%= scope.lookupvar('foo-pkg-service::params::backup_log_enable')  %> ( Set with $foo-pkg-service_backup_log       )
+
+Variables used by firewall class:
+$foo-pkg-service::params::firewall_source_real      = <%= scope.lookupvar('foo-pkg-service::params::firewall_source_real')      %> ( Set with $foo-pkg-service_firewall_source      )
+$foo-pkg-service::params::firewall_destination_real = <%= scope.lookupvar('foo-pkg-service::params::firewall_destination_real') %> ( Set with $foo-pkg-service_firewall_destination )
+$foo-pkg-service::params::firewall_enable           = <%= scope.lookupvar('foo-pkg-service::params::firewall_destination_real') %> ( Set with $foo-pkg-service_firewall_enable      )
+
